@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Networking;
+using LeaderboardShared;
 
 public class SimpleHttpClient : MonoBehaviour
 {
@@ -78,11 +79,11 @@ public class SimpleHttpClient : MonoBehaviour
     }
 }
 [Serializable]
-class LeaderboardData
+class LeaderboardData:ILeaderboardData
 {
-    public int ID;
-    public string Name;
-    public int Score;
+    public int ID { get; set; }
+    public string Name { get; set; }
+    public int Score { get; set; }
 }
 enum LeaderBoardRequest
 {
