@@ -45,7 +45,7 @@ public class SimpleHttpClient : MonoBehaviour
                 {
                     using (UnityWebRequest request = new UnityWebRequest(UpdateUrl, "POST"))
                     {
-                        LeaderboardData user1Data = new LeaderboardData()
+                        ILeaderboardData user1Data = new LeaderboardData()
                         {
                             ID = 1,
                             Name = "Haniye",
